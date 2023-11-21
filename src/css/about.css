@@ -1,0 +1,87 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.about p {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.about img {
+    display: block;
+    height: 550px;
+}
+
+.navbar {
+    order: -1;
+}
+
+.navbar-nav a.nav-link {
+    color: #9AB2D4;
+    transition: color 0.3s ease;
+    position: relative;
+    font-size: 32px;
+    /* עוברים למעמד יחיד */
+    text-decoration: none;
+    padding-bottom: 3px;
+    /* יצירת מרווח עם הקו התחתון */
+}
+
+.navbar-nav a.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #CDBCDB;
+    /* צבע הקו */
+    transform-origin: bottom right;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav a.nav-link:hover::after {
+    transform-origin: bottom left;
+    transform: scale(1, 1);
+}
+
+.navbar-nav a.nav-link:hover {
+    color: #CDBCDB;
+}
+
+.about h1 {
+    color: #8243b5;
+}
+
+.fab {
+    font-size: 40px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.social-icons-about a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #8243b5;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons-about a:hover {
+    color: #be75f9;
+}
