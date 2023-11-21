@@ -35,7 +35,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                                 </li>
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/protfolio">
-                                        {language === 'en' ? 'Protfolio' : 'Protafolio'}
+                                        {language === 'en' ? 'Portfolio' : 'Portafolio'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-4">
