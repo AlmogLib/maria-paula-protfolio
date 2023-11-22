@@ -4,7 +4,7 @@
 }
 
 .protfolio {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .protfolioForm {
@@ -16,8 +16,10 @@
 
 .protfolioForm img {
     height: 300px;
+    width: 600px;
     margin-bottom: 40px;
     border-radius: 30px;
+    object-fit: cover;
 }
 
 .head {
@@ -59,7 +61,7 @@
 }
 
 .logoRow .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     /* זומינג ב-10% */
     opacity: 0.7;
     /* שקיפות נמוכה יותר בעת hover */

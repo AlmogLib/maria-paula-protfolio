@@ -31,7 +31,7 @@ const Services: FunctionComponent<ServicesProps> = () => {
                                 </li>
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/about">
-                                        {language === 'en' ? 'About' : 'Acerca de'}
+                                        {language === 'en' ? 'About' : 'Sobre Mi'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-4">

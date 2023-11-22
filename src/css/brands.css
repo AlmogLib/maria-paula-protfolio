@@ -9,6 +9,10 @@
     text-align: center;
 }
 
+.nav-item {
+    font-family: 'Lato', sans-serif;
+}
+
 .fluencyForm {
     text-align: center;
 }

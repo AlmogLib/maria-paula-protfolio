@@ -21,7 +21,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                 <div className="navbar row">
                     <nav className="navbar navbar-expand-lg">
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav mb-2 mb-lg-0 mx-auto">
+                            <ul className="navbar-nav mb-lg-0 mx-auto">
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/">
                                         {language === 'en' ? 'Welcome' : 'Bienvenido'}
@@ -29,7 +29,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                                 </li>
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/about">
-                                        {language === 'en' ? 'About' : 'Acerca de'}
+                                        {language === 'en' ? 'About' : 'Sobre Mi'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-4">
@@ -51,8 +51,8 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="row contactForm justify-content-around align-items-center py-5">
-                    <div className="col-md-5 p-5">
+                <div className="row contactForm justify-content-around align-items-center">
+                    <div className="col-md-6 p-5">
                         <form>
                             <h1 className="mb-5">{language === 'en' ? 'Get In Touch' : 'Contacto'}</h1>
                             <div className="mb-3">
@@ -85,7 +85,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                         </form>
                     </div>
                     <div className="col-md-5">
-                        <img src="/contact-me.png" alt="ContactMe" />
+                        <img src="/ContactMe.png" alt="ContactMe" />
                     </div>
                 </div>
                 <div className="social-icons mb-5">

@@ -14,7 +14,10 @@ const Home: FunctionComponent<HomeProps> = () => {
             <div className="welcome">
                 <div className="logo row justify-content-center align-items-center">
                     <div className="col-12 text-center mb-4">
-                        <img src="/Logo.png" alt="Paula Rojas" />
+                        <video height="500" controls={false} autoPlay muted>
+                            <source src="logo_vid.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
                 <div className="navbar row">
@@ -23,7 +26,7 @@ const Home: FunctionComponent<HomeProps> = () => {
                             <ul className="navbar-nav mb-2 mb-lg-0 mx-auto">
                                 <li className="nav-item p-5">
                                     <NavLink className="nav-link" to="/about">
-                                        {language === 'en' ? 'About' : 'Acerca de'}
+                                        {language === 'en' ? 'About' : 'Sobre Mi'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-5">

@@ -46,7 +46,7 @@ const About: FunctionComponent<AboutProps> = () => {
                                 </li>
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/about">
-                                        {language === 'en' ? 'About' : 'Acerca de'}
+                                        {language === 'en' ? 'About' : 'Sobre Mi'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-4">
@@ -68,12 +68,7 @@ const About: FunctionComponent<AboutProps> = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="headline row justify-content-center align-items-center">
-                    <div className="col-12 text-center mb-4">
-                        <h1>{language === 'en' ? 'About Me' : 'Acerca de'}</h1>
-                    </div>
-                </div>
-                <div className="row">
+                <div className="row mt-5 w-75">
                     <div className="col-8">
                         {language === 'en' && englishParagraph}
                         {language !== 'en' && spanishParagraph}

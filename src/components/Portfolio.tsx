@@ -30,7 +30,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                                 </li>
                                 <li className="nav-item p-4">
                                     <NavLink className="nav-link" to="/about">
-                                        {language === 'en' ? 'About' : 'Acerca de'}
+                                        {language === 'en' ? 'About' : 'Sobre Mi'}
                                     </NavLink>
                                 </li>
                                 <li className="nav-item p-4">
@@ -52,10 +52,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                         </div>
                     </nav>
                 </div>
-
                 <div className="protfolioForm justify-content-around align-items-center mb-5">
-                    <h3 className="head mb-3">{language === 'en' ? 'I invite you to explore my portfolio and discover the services I offer.' : 'Te invito a explorar mi portafolio y descubrir los servicios que ofrezco.'}</h3>
-                    <h4 className="head mb-4"> {language === 'en' ? 'Feel free to reach out, hopefully we’ll be working together very soon!' : 'No dudes en comunicarte con nosotros, ¡esperamos que trabajemos juntos muy pronto!'}</h4>
                     <div className="row logoRow mt-4">
                         <div className="col logo">
                             <NavLink className="nav-link" to="/fluencyAcademy">
@@ -64,7 +61,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                         </div>
                         <div className="col logo">
                             <NavLink className="nav-link" to="/neutrogena">
-                                <img src="/Neutrogena.png" alt="Neutrogena" />
+                                <img src="/neutrogena_logo.png" alt="Neutrogena" />
                             </NavLink>
                         </div>
                     </div>
