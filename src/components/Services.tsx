@@ -80,7 +80,7 @@ const Services: FunctionComponent<ServicesProps> = () => {
                         </ul>
                     </div>
                     <div className="row servicesDetailsRight">
-                        <h3>{language === 'en' ? 'Email Marketing' : 'Correo de propaganda'}</h3>
+                        <h3>Email Marketing</h3>
                         <ul style={{ listStyleType: "disc" }}>
                             <li>{language === 'en' ? 'Promotional emails' : 'Correos electrónicos promocionales'}</li>
                             <li>{language === 'en' ? 'Newsletters' : 'Boletines informativos (newsletters)'}</li>
