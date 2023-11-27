@@ -4,7 +4,7 @@
 }
 
 .contact {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -70,13 +70,13 @@
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
-    color: #8243b5;
+    color: #AAD59E;
     font-size: 24px;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #be75f9;
+    color: #b9e7ac;
 }
 
 .contactForm img {

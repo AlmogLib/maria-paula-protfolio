@@ -53,10 +53,13 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                     </nav>
                 </div>
                 <div className="protfolioForm justify-content-around align-items-center mb-5">
+                    <div className="row mb-5">
+                        <h4>{language === 'en' ? 'Click on each logo to see my work' : 'Haz clic en cada logo para ver mi trabajo'}</h4>
+                    </div>
                     <div className="row logoRow mt-4">
                         <div className="col logo">
                             <NavLink className="nav-link" to="/fluencyAcademy">
-                                <img src="/Fluency-Academy-New-Logo.png" alt="Fluency-Academy" />
+                                <img src="/LOGOS/fluency2.png" alt="Fluency-Academy" />
                             </NavLink>
                         </div>
                         <div className="col logo">

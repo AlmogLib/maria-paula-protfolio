@@ -98,59 +98,68 @@ const FluencyAcademy: FunctionComponent<FluencyAcademyProps> = () => {
                     </nav>
                 </div>
                 <div className="fluencyForm mb-5">
-                    <h1 className="mb-4">Fluency Academy - LATAM</h1>
-                    {language === 'en' && englishParagraph}
-                    {language !== 'en' && spanishParagraph}
-                    <h1 className="mt-5 mb-5">{language === 'en' ? 'Social media' : 'Redes sociales'}</h1>
-                    <h3 className="mt-5 mb-3">Copy In</h3>
-                    <Slider {...settings} initialSlide={selectedImageIndex}>
-                        {thumbnails.map((thumbnail, index) => (
-                            <div key={index} onClick={() => handleThumbnailClick(index)}>
-                                <img src={thumbnail} alt={`Image ${index + 1}`} />
+                    {/* <h1 className="mb-4">Fluency Academy - LATAM</h1> */}
+                    <p className="infoP">
+                        {language === 'en' && englishParagraph}
+                        {language !== 'en' && spanishParagraph}
+                    </p>
+                    <h1 className="mt-5">{language === 'en' ? 'Social media' : 'Redes sociales'}</h1>
+                    <div className="row">
+                        <div className="col-6">
+                            <h3 className="mt-5 mb-3">Copy In</h3>
+                            <Slider {...settings} initialSlide={selectedImageIndex}>
+                                {thumbnails.map((thumbnail, index) => (
+                                    <div key={index} onClick={() => handleThumbnailClick(index)}>
+                                        <img src={thumbnail} alt={`Image ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </Slider>
+                            <div className="thumbnail-container mb-5">
+                                {thumbnails.map((thumbnail, index) => (
+                                    <img
+                                        key={index}
+                                        className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
+                                        src={thumbnail}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        onClick={() => handleThumbnailClick(index)}
+                                    />
+                                ))}
                             </div>
-                        ))}
-                    </Slider>
-                    <div className="thumbnail-container mb-5">
-                        {thumbnails.map((thumbnail, index) => (
-                            <img
-                                key={index}
-                                className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
-                                src={thumbnail}
-                                alt={`Thumbnail ${index + 1}`}
-                                onClick={() => handleThumbnailClick(index)}
-                            />
-                        ))}
-                    </div>
-                    <div className="mx-5"></div>
-                    <h3 className="mt-5 mb-3">Copy Out</h3>
-                    <Slider {...settings} initialSlide={selectedImageIndex}>
-                        {thumbnails2.map((thumbnail, index) => (
-                            <div key={index} onClick={() => handleThumbnailClick(index)}>
-                                <img src={thumbnail} alt={`Image ${index + 1}`} />
+                        </div>
+                        <div className="col-6">
+                            <h3 className="mt-5 mb-3">Copy Out</h3>
+                            <Slider {...settings} initialSlide={selectedImageIndex}>
+                                {thumbnails2.map((thumbnail, index) => (
+                                    <div key={index} onClick={() => handleThumbnailClick(index)}>
+                                        <img src={thumbnail} alt={`Image ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </Slider>
+                            <div className="thumbnail-container mb-5">
+                                {thumbnails2.map((thumbnail, index) => (
+                                    <img
+                                        key={index}
+                                        className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
+                                        src={thumbnail}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        onClick={() => handleThumbnailClick(index)}
+                                    />
+                                ))}
                             </div>
-                        ))}
-                    </Slider>
-                    <div className="thumbnail-container mb-5">
-                        {thumbnails2.map((thumbnail, index) => (
-                            <img
-                                key={index}
-                                className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
-                                src={thumbnail}
-                                alt={`Thumbnail ${index + 1}`}
-                                onClick={() => handleThumbnailClick(index)}
-                            />
-                        ))}
+                        </div>
                     </div>
                 </div>
                 <div className="webContent my-5">
                     <h1 className="mb-4">{language === 'en' ? 'Web Content' : 'Contenido web'}</h1>
-                    <p><a href="https://es.fluencytv.com/contenidos/como-empezar-a-hablar-ingles" target="_blank">Cómo empezar a hablar inglés</a></p>
-                    <p><a href="https://es.fluencytv.com/contenidos/en-cuantos-paises-se-habla-ingles" target="_blank">En cuántos países se habla inglés</a></p>
-                    <p><a href="https://es.fluencytv.com/contenidos/walk-n-talk-essentials-portugues-07-credito-o-debito" target="_blank">
-                        Walk 'n' Talk Essentials Portugués #07 - ¿Crédito o débito?</a></p>
+                    <ul style={{ listStyleType: "disc" }}>
+                        <li><a href="https://es.fluencytv.com/contenidos/como-empezar-a-hablar-ingles" target="_blank">Cómo empezar a hablar inglés</a></li>
+                        <li><a href="https://es.fluencytv.com/contenidos/en-cuantos-paises-se-habla-ingles" target="_blank">En cuántos países se habla inglés</a></li>
+                        <li><a href="https://es.fluencytv.com/contenidos/walk-n-talk-essentials-portugues-07-credito-o-debito" target="_blank">
+                            Walk 'n' Talk Essentials Portugués #07 - ¿Crédito o débito?</a></li>
+                    </ul>
                 </div>
                 <div className="adsPart">
-                    <h1 className="pt-3">{language === 'en' ? 'Ads' : 'Anúncios'}</h1>
+                    <h1 className="pt-3 mb-3">{language === 'en' ? 'Ads' : 'Anuncios'}</h1>
                     <div className="row adsRow">
                         <div className="col ad mt-5">
                             <video width="640" height="450" controls>

@@ -55,7 +55,7 @@ const Services: FunctionComponent<ServicesProps> = () => {
                 </div>
                 <div className="servicesForm justify-content-around align-items-center mb-5">
                     <div className="row servicesDetailsLeft">
-                        <h3>{language === 'en' ? 'Social Media' : 'Redes Sociales'}</h3>
+                        <h3>{language === 'en' ? 'Social Media Writing' : 'Redacción para Redes Sociales'}</h3>
                         <ul style={{ listStyleType: "disc" }}>
                             <li>{language === 'en' ? 'Organic social media posts' : 'Publicaciones orgánicas para redes sociales'}</li>
                             <li>Hashtags</li>
@@ -96,9 +96,16 @@ const Services: FunctionComponent<ServicesProps> = () => {
                         </ul>
                     </div>
                 </div>
+                <div className="social-icons mb-5">
+                    <a href="https://api.whatsapp.com/send?phone=5511914894932" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/maria-paula-rojas-leal/" target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
         </div>
-
     );
 }
 

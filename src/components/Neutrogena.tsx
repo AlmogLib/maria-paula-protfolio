@@ -104,80 +104,90 @@ const Neutrogena: FunctionComponent<NeutrogenaProps> = () => {
                     </nav>
                 </div>
                 <div className="neutrogenaForm mb-5">
-                    <h1 className="mb-4">NEUTROGENA® - Argentina, Chile</h1>
-                    {language === 'en' && englishParagraph}
-                    {language !== 'en' && spanishParagraph}
-                    <h1 className="mt-5 mb-5">{language === 'en' ? 'Social media' : 'Redes sociales'}</h1>
-                    <h3 className="mt-5 mb-3">Copy In</h3>
-                    <Slider {...settings} initialSlide={selectedImageIndex}>
-                        {thumbnails.map((thumbnail, index) => (
-                            <div key={index} onClick={() => handleThumbnailClick(index)}>
-                                <img src={thumbnail} alt={`Image ${index + 1}`} />
-                            </div>
-                        ))}
-                    </Slider>
-                    <div className="thumbnail-container mb-5">
-                        {thumbnails.map((thumbnail, index) => (
-                            <img
-                                key={index}
-                                className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
-                                src={thumbnail}
-                                alt={`Thumbnail ${index + 1}`}
-                                onClick={() => handleThumbnailClick(index)}
-                            />
-                        ))}
-                    </div>
-                    <div className="mx-5"></div>
-                    <Slider {...settings} initialSlide={selectedImageIndex}>
-                        {thumbnails2.map((thumbnail, index) => (
-                            <div key={index} onClick={() => handleThumbnailClick(index)}>
-                                <img src={thumbnail} alt={`Image ${index + 1}`} />
-                            </div>
-                        ))}
-                    </Slider>
-                    <div className="thumbnail-container mb-5">
-                        {thumbnails2.map((thumbnail, index) => (
-                            <img
-                                key={index}
-                                className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
-                                src={thumbnail}
-                                alt={`Thumbnail ${index + 1}`}
-                                onClick={() => handleThumbnailClick(index)}
-                            />
-                        ))}
-                    </div>
+                    {/* <h1 className="mb-4">NEUTROGENA® - Argentina, Chile</h1> */}
+                    <p className="infoP">
+                        {language === 'en' && englishParagraph}
+                        {language !== 'en' && spanishParagraph}
+                    </p>
+                    <h1 className="mt-2 mb-5">{language === 'en' ? 'Social media' : 'Redes sociales'}</h1>
+                    <h3 className="mt-5 mb-4">Copy In</h3>
                     <div className="row">
-                        <div className="col ad mt-5">
+                        <div className="col-6">
+                            <Slider {...settings} initialSlide={selectedImageIndex}>
+                                {thumbnails.map((thumbnail, index) => (
+                                    <div key={index} onClick={() => handleThumbnailClick(index)}>
+                                        <img src={thumbnail} alt={`Image ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </Slider>
+                            <div className="thumbnail-container mb-5">
+                                {thumbnails.map((thumbnail, index) => (
+                                    <img
+                                        key={index}
+                                        className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
+                                        src={thumbnail}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        onClick={() => handleThumbnailClick(index)}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="col-6">
+
+                            <Slider {...settings} initialSlide={selectedImageIndex}>
+                                {thumbnails2.map((thumbnail, index) => (
+                                    <div key={index} onClick={() => handleThumbnailClick(index)}>
+                                        <img src={thumbnail} alt={`Image ${index + 1}`} />
+                                    </div>
+                                ))}
+                            </Slider>
+                            <div className="thumbnail-container mb-5">
+                                {thumbnails2.map((thumbnail, index) => (
+                                    <img
+                                        key={index}
+                                        className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
+                                        src={thumbnail}
+                                        alt={`Thumbnail ${index + 1}`}
+                                        onClick={() => handleThumbnailClick(index)}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col-6 ad mt-5">
                             <video width="640" height="450" controls>
                                 <source src="/NEUTROGENA/Copy-in/Post/poster_barbie_LATAM_L.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        {/* <div className="col ad pb-5">
+                        <div className="col-6 ad my-5">
                             <video width="640" height="450" controls>
-                                <source src="/NEUTROGENA/Copy-in/Video/copy.mp4" type="video/mp4" />
+                                <source src="/NEUTROGENA/Copy-in/Video/neutrogena_clip2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
-                        </div> */}
+                        </div>
                     </div>
-                    <h3 className="mt-5 mb-3">Copy Out</h3>
-                    <Slider {...settings} initialSlide={selectedImageIndex}>
-                        {thumbnails3.map((thumbnail, index) => (
-                            <div key={index} onClick={() => handleThumbnailClick(index)}>
-                                <img src={thumbnail} alt={`Image ${index + 1}`} />
-                            </div>
-                        ))}
-                    </Slider>
-                    <div className="thumbnail-container mb-5">
-                        {thumbnails3.map((thumbnail, index) => (
-                            <img
-                                key={index}
-                                className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
-                                src={thumbnail}
-                                alt={`Thumbnail ${index + 1}`}
-                                onClick={() => handleThumbnailClick(index)}
-                            />
-                        ))}
+                    <div className="row w-75 mx-auto">
+                        <h3 className="mt-5 mb-4">Copy Out</h3>
+                        <Slider {...settings} initialSlide={selectedImageIndex}>
+                            {thumbnails3.map((thumbnail, index) => (
+                                <div key={index} onClick={() => handleThumbnailClick(index)}>
+                                    <img src={thumbnail} alt={`Image ${index + 1}`} />
+                                </div>
+                            ))}
+                        </Slider>
+                        <div className="thumbnail-container mb-5">
+                            {thumbnails3.map((thumbnail, index) => (
+                                <img
+                                    key={index}
+                                    className={`thumbnail ${index === selectedImageIndex ? 'active' : ''}`}
+                                    src={thumbnail}
+                                    alt={`Thumbnail ${index + 1}`}
+                                    onClick={() => handleThumbnailClick(index)}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className="space my-5"></div>

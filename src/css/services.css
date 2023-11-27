@@ -30,10 +30,10 @@
 .servicesDetailsRight {
     border-radius: 15px;
     background-color: #e9dbff;
-    padding-right: 100px;
+    padding-left: 100px;
     padding-top: 20px;
-    text-align: right;
-    direction: rtl;
+    text-align: left;
+    /* direction: rtl; */
 }
 
 .navbar-nav a.nav-link {
@@ -72,4 +72,16 @@
 
 h1 {
     color: #CDBCDB;
+}
+
+.social-icons-about a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #AAD59E;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons-about a:hover {
+    color: #b9e7ac;
 }

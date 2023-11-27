@@ -8,15 +8,15 @@
 }
 
 .protfolioForm {
-    background-color: #CDBCDB;
+    /* background-color: #CDBCDB; */
     border-radius: 20px;
     padding: 20px;
     width: 100%;
 }
 
 .protfolioForm img {
-    height: 300px;
-    width: 600px;
+    height: 200px;
+    width: 450px;
     margin-bottom: 40px;
     border-radius: 30px;
     object-fit: cover;

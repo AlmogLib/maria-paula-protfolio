@@ -26,6 +26,10 @@
     width: 450px;
 }
 
+.info {
+    max-width: 50vw;
+}
+
 .navbar {
     order: -1;
 }
@@ -77,11 +81,11 @@
 .social-icons-about a {
     display: inline-block;
     margin: 0 10px;
-    color: #8243b5;
+    color: #AAD59E;
     font-size: 24px;
     transition: color 0.3s;
 }
 
 .social-icons-about a:hover {
-    color: #be75f9;
+    color: #b9e7ac;
 }

@@ -2,10 +2,19 @@ import React, { useState } from 'react';
 import '../css/contact.css';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
+import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactProps { }
 
 const Contact: React.FunctionComponent<ContactProps> = () => {
+    // const ContactForm = () => {
+    //     const [state, handleSubmit] = useForm("xvojjkww");
+    //     if (state.succeeded) {
+    //         return <p>Thanks for joining!</p>;
+    //     }
+    // };
+
+
     const { language } = useLanguage();
     const [selectedParagraph, setSelectedParagraph] = useState(
         language === 'en' ? 'englishParagraph' : 'spanishParagraph'
@@ -53,14 +62,14 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                 </div>
                 <div className="row contactForm justify-content-around align-items-center">
                     <div className="col-md-6 p-5">
-                        <form>
-                            <h1 className="mb-5">{language === 'en' ? 'Get In Touch' : 'Contacto'}</h1>
+                        <form action="https://formspree.io/lieber.almog@gmail.com" method="POST">
+                            <b> <h1 className="mb-5">{language === 'en' ? 'Get In Touch' : 'Contacto'}</h1></b>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label visually-hidden">
                                     {language === 'en' ? 'Name' : 'Nombre'}
                                 </label>
                                 <div className="input-group mb-3">
-                                    <input type="text" className="form-control rounded-pill" id="name" placeholder={language === 'en' ? 'Name' : 'Nombre'} />
+                                    <input type="text" name="name" className="form-control rounded-pill" id="name" placeholder={language === 'en' ? 'Name' : 'Nombre'} />
                                 </div>
                             </div>
                             <div className="mb-3">
@@ -68,7 +77,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                                     {language === 'en' ? 'Email' : 'Correo Electrónico'}
                                 </label>
                                 <div className="input-group mb-3">
-                                    <input type="email" className="form-control rounded-pill" id="email" placeholder={language === 'en' ? 'Email' : 'Correo Electrónico'} />
+                                    <input type="email" name="email" className="form-control rounded-pill" id="email" placeholder={language === 'en' ? 'Email' : 'Correo Electrónico'} />
                                 </div>
                             </div>
                             <div className="mb-3">
@@ -76,7 +85,7 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                                     {language === 'en' ? 'Message' : 'Mensaje'}
                                 </label>
                                 <div className="input-group mb-3">
-                                    <textarea className="form-control rounded" id="message" rows={3} placeholder={language === 'en' ? 'Message' : 'Mensaje'}></textarea>
+                                    <textarea name="message" className="form-control rounded" id="message" rows={3} placeholder={language === 'en' ? 'Message' : 'Mensaje'}></textarea>
                                 </div>
                             </div>
                             <button type="submit" className="btn btn-primary rounded-pill">
@@ -84,9 +93,9 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                             </button>
                         </form>
                     </div>
-                    <div className="col-md-5">
+                    {/* <div className="col-md-5">
                         <img src="/ContactMe.png" alt="ContactMe" />
-                    </div>
+                    </div> */}
                 </div>
                 <div className="social-icons mb-5">
                     <a href="https://api.whatsapp.com/send?phone=5511914894932" target="_blank" rel="noopener noreferrer">
