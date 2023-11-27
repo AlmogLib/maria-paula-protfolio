@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/contact.css';
 import { NavLink } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
-import { useForm, ValidationError } from '@formspree/react';
+// import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactProps { }
 
@@ -62,7 +62,10 @@ const Contact: React.FunctionComponent<ContactProps> = () => {
                 </div>
                 <div className="row contactForm justify-content-around align-items-center">
                     <div className="col-md-6 p-5">
-                        <form action="https://formspree.io/lieber.almog@gmail.com" method="POST">
+                        <form
+                        // action="https://formspree.io/lieber.almog@gmail.com" 
+                        // method="POST"
+                        >
                             <b> <h1 className="mb-5">{language === 'en' ? 'Get In Touch' : 'Contacto'}</h1></b>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label visually-hidden">
