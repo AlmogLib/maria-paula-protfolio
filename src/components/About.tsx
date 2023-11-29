@@ -69,7 +69,7 @@ const About: FunctionComponent<AboutProps> = () => {
                     </nav>
                 </div>
                 <div className="row info mt-5 w-75">
-                    <div className="col-8">
+                    <div className="col-8 wordPart">
                         {language === 'en' && englishParagraph}
                         {language !== 'en' && spanishParagraph}
                     </div>
